@@ -247,8 +247,8 @@ GravityPoint.prototype = (function(o) {
         ctx.save();
 
         grd = ctx.createRadialGradient(this.x, this.y, this.radius, this.x, this.y, this.radius * 5);
-        grd.addColorStop(0, 'rgba(0, 0, 0, 0.1)');
-        grd.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        grd.addColorStop(0, 'rgba(135,206,250, 0.1)');
+        grd.addColorStop(1, 'rgba(135,206,250, 0)');
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius * 5, 0, Math.PI * 2, false);
         ctx.fillStyle = grd;
@@ -256,8 +256,8 @@ GravityPoint.prototype = (function(o) {
 
         r = Math.random() * this.currentRadius * 0.7 + this.currentRadius * 0.3;
         grd = ctx.createRadialGradient(this.x, this.y, r, this.x, this.y, this.currentRadius);
-        grd.addColorStop(0, 'rgba(0, 0, 0, 1)');
-        grd.addColorStop(1, Math.random() < 0.2 ? 'rgba(255, 196, 0, 0.15)' : 'rgba(103, 181, 191, 0.75)');
+        grd.addColorStop(0, 'rgba(192, 253, 254, 1)');
+        grd.addColorStop(1, Math.random() < 0.2 ? 'rgba(101, 207, 250, 0.15)' : 'rgba(60, 135, 201, 0.75)');
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.currentRadius, 0, Math.PI * 2, false);
         ctx.fillStyle = grd;
@@ -323,7 +323,7 @@ Particle.prototype = (function(o) {
 
     // Configs
 
-    var BACKGROUND_COLOR      = 'rgba(11, 51, 56, 1)',
+    var BACKGROUND_COLOR      = 'rgba(0, 0, 0, 1)',
         PARTICLE_RADIUS       = 1,
         G_POINT_RADIUS        = 10,
         G_POINT_RADIUS_LIMITS = 65;
@@ -355,8 +355,8 @@ Particle.prototype = (function(o) {
             cy = canvas.height * 0.5;
 
         grad = context.createRadialGradient(cx, cy, 0, cx, cy, Math.sqrt(cx * cx + cy * cy));
-        grad.addColorStop(0, 'rgba(0, 0, 0, 0)');
-        grad.addColorStop(1, 'rgba(0, 0, 0, 0.35)');
+        grad.addColorStop(0, 'rgba(0,0,0, 0)');
+        grad.addColorStop(1, 'rgba(0,0,0, 0.35)');
     }
 
     function mouseMove(e) {
